@@ -7,7 +7,7 @@ def jogo():
     
     window = Tk()
     window.title("Campo Minado")
-
+    window.resizable(False,False)
     
     
     def clique_botao(event):
