@@ -33,13 +33,13 @@ def jogo():
             for dx in [-1, 0, 1]:
                 for dy in [-1, 0, 1]:
                     ni, nj = linha + dx, coluna + dy
-                    if 0 <= ni < 12 and 0 <= nj < 12 and grade[ni][nj] == 0 and not visited[ni][nj]:
-                        visited[ni][nj] = True
+                    if 0 <= ni < 12 and 0 <= nj < 12 and grade[ni][nj] == 0 and not visitado[ni][nj]:
+                        visitado[ni][nj] = True
                         atualizar_botao_zero(ni, nj)
 
     
     botoes = [[None] * 12 for _ in range(12)]
-    visited = [[False] * 12 for _ in range(12)]
+    visitado = [[False] * 12 for _ in range(12)]
     grade = [[0] * 12 for _ in range(12)]
     minas = random.sample(range(144), 20)  # 20 minas aleatórias
     
